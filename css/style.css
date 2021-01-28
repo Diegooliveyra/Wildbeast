@@ -1,7 +1,85 @@
+body, p, h1, ul, li, blockquote {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  
+  font-family: 'Vollkorn', Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 img {
-  max-width: 100px;
+  max-width: 100%;
+}
+
+/* Grid Geral */
+
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas: 
+  'header header header'
+  'sidenav content anuncio'
+  'footer footer footer'
+  ;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav ul a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 1.125em;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .1);
+  transition: .1s;
+}
+
+.header nav ul a:hover {
+  background: rgba(0, 0, 0, .5);
+}
+
+.header li + li {
+  margin-left: 30px;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.anuncio {
+  grid-area: anuncio;
+}
+
+.footer {
+  grid-area: footer;
 }
