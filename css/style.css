@@ -16,6 +16,7 @@ li {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
@@ -92,16 +93,49 @@ img {
   background-color: #B07DFB;
 }
 
-
-
+/* Content */
 .content {
-  grid-area: content;
+  grid-area: content; 
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-.anuncio {
+.col-wide {
+  grid-column: 1 / -1;
+}
+
+.image-1 {
+  grid-row: span 2;
+  align-self: end;
+}
+
+.image-2 {
+  align-self: end;
+}
+
+/* Anuncio */
+.anuncios {
   grid-area: anuncio;
+  background: #fafbfc;
+  padding: 30px;
+  display: grid;
+  align-content: start;
+  gap: 30px;
 }
 
+
+/* Footer */
 .footer {
   grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.footer p {
+  color: white;
+  padding: 30px;
+  text-align: center;
 }
